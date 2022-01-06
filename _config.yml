@@ -1,0 +1,11 @@
+title: My Amazing Site
+author: My Name
+email: my-email@domain.com
+description: >
+  This is my amazing site!
+copyright: My Name
+
+
+plugins:
+ - jekyll-feed
+ - jekyll-seo-tag

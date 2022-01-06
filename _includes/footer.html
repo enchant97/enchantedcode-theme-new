@@ -1,0 +1,10 @@
+<footer>
+    <h2>{{ site.title | escape }}</h2>
+    <div>
+        {%- if site.copyright -%}
+        &copy; {{ site.copyright }} {{ 'now' | date: "%Y" }}
+        {%- else if site.author -%}
+        {{ site.author | escape }}
+        {%- endif -%}
+    </div>
+</footer>
