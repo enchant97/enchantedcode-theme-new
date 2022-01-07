@@ -1,5 +1,5 @@
 <footer>
-    <h2>{{ site.title | escape }}</h2>
+    <h1>{{ site.title | escape }}</h1>
     <div>
         {%- if site.copyright -%}
         &copy; {{ site.copyright }} {{ 'now' | date: "%Y" }}
@@ -7,5 +7,5 @@
         {{ site.author | escape }}
         {%- endif -%}
     </div>
-    <a href="{{ "/feed.xml" | relative_url }}">RSS</a>
+    <a href="{{ "/feed.xml" | relative_url }}">RSS Feed</a>
 </footer>
