@@ -1,0 +1,42 @@
+{% if site.paginate %}
+{% assign posts = paginator.posts %}
+{% else %}
+{% assign posts = site.posts %}
+{% endif %}
+
+{%- if posts.size > 0 -%}
+<div>
+    {%- if site.posts_title -%}
+    <h1>{{ site.posts_title }}</h1>
+    {%- endif -%}
+    {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
+    {%- for post in posts -%}
+    <article>
+        <h2><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
+        <time datetime="{{ post.date | date: '%F' }}">{{ post.date | date: date_format }}</time>
+        {%- if site.show_excerpts -%}
+        {{ post.excerpt }}
+        {%- endif -%}
+    </article>
+    {%- endfor -%}
+</div>
+
+{% if site.paginate %}
+<div style="display: flex; flex-direction: row;">
+    <div>{{ paginator.page }}</div>
+
+    {%- if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | relative_url }}">Previous</a>
+    {%- else %}
+    <div></div>
+    {%- endif %}
+
+    {%- if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | relative_url }}">Next</a>
+    {%- else %}
+    <div></div>
+    {%- endif %}
+</div>
+{%- endif %}
+
+{%- endif -%}
