@@ -1,6 +1,6 @@
 <header>
     {%- assign default_paths = site.pages | map: "path" -%}
-    {%- assign page_paths = site.header_pages | default: default_paths -%}
+    {%- assign page_paths = site.header_pages | default: default_paths | uniq -%}
     <h1><a href="{{ " "/" | relative_url }}">{{ site.title | escape }}</a></h1>
     <nav>
         {%- if page_paths -%}
@@ -12,4 +12,5 @@
         {%- endfor -%}
         {%- endif -%}
     </nav>
+    <hr>
 </header>
