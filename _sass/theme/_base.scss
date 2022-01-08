@@ -3,18 +3,20 @@ $main-ff: 'Open Sans', sans-serif;
 $site-name-ff: 'Audiowide', cursive;
 $title-ff: 'Roboto', sans-serif;
 $code-ff: 'Roboto Mono', monospace;
+// Colors
+$site_color_scheme: #2a76b7;
 // Font Colors
 $main-fg: black;
 $faded-fg: lighten($main-fg, 50);
 // Backgrounds
 $body-bg: #f5f5f5;
-$sub-bg: darken($body-bg, 2);
+$sub-bg: darken($body-bg, 3);
 $sub2-bg: darken($body-bg, 8);
 $sub3-bg: darken($body-bg, 45);
 // Borders
-$border-table-style: 1px solid darken($body-bg, 30);
-$border-style: 1px solid lightgray;
-$border-rad: 10px;
+$border-table-style: 1px solid $site_color_scheme;
+
+$border-rad: 8px;
 
 body {
     background-color: $body-bg;
@@ -50,7 +52,7 @@ a:hover {
 header.body-header {
     display: flex;
     align-items: center;
-    border-bottom: $border-style;
+    border-bottom: 5px solid $site_color_scheme;
     
     h1 {
         margin-right: auto;
@@ -69,7 +71,7 @@ header.body-header {
     a:visited {
         color: $main-fg;
     }
-    
+
     nav {
         display: flex;
         gap: 15px;
@@ -108,7 +110,7 @@ pre.highlight, code {
 
 blockquote {
     color: lighten($main-fg, 50);
-    border-left: 4px solid $sub3-bg;
+    border-left: 6px solid $site_color_scheme;
     margin: 0;
     padding-left: 15px;
     letter-spacing: -1px;
@@ -118,11 +120,11 @@ blockquote {
 table {
     width: 100%;
     border-collapse: collapse;
-    border-bottom: 4px solid $sub3-bg;
+    border-bottom: 4px solid $site_color_scheme;
     margin: 10px 0;
 
     thead {
-        background-color: $sub3-bg;
+        background-color: $site_color_scheme;
         color: white;
     }
 
@@ -230,7 +232,7 @@ footer {
     text-align: center;
     margin-top: 50px;
     padding-top: 10px;
-    border-top: $border-style;
+    border-top: 1px solid darken($body-bg, 10);
 
     h1 {
         font-size: 1.2em;
