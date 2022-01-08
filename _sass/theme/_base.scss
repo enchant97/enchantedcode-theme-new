@@ -202,6 +202,7 @@ ol.breadcrumb {
     >li+li:before {
         padding: 0 5px;
         content: "/";
+        color: lighten($main-fg, 50);
     }
 
     li.active {
