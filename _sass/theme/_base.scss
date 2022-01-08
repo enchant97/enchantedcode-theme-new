@@ -156,6 +156,10 @@ table {
     }
 }
 
+img {
+    max-width: 100%;
+}
+
 .posts {
     display: grid;
     grid-template-columns: repeat(3, auto);
@@ -256,5 +260,9 @@ footer {
 
     .posts {
         grid-template-columns: repeat(1, auto);
+    }
+
+    img {
+        width: 100%;
     }
 }
