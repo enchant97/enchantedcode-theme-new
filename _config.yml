@@ -5,6 +5,8 @@ description: >
   This is my amazing site!
 copyright: My Name
 
+# EnchantedCode Theme Configs
+enable_breadcrumb: true
 
 plugins:
  - jekyll-feed
