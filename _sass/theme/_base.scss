@@ -78,6 +78,10 @@ header.body-header {
     list-style-position: inside;
 }
 
+pre {
+    overflow-x: auto;
+}
+
 pre.highlight {
     padding: 8px 12px;
 
@@ -233,6 +237,18 @@ footer {
 }
 
 @media(max-width: 600px) {
+    header.body-header h1 {
+        margin-right: initial;
+    }
+    header.body-header, header.body-header nav {
+        text-align: center;
+        flex-direction: column;
+    }
+
+    header.body-header nav {
+        margin-bottom: 10px;
+    }
+
     .posts {
         grid-template-columns: repeat(1, auto);
     }
