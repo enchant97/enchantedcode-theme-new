@@ -5,7 +5,7 @@
 {% endif %}
 
 {%- if posts.size > 0 -%}
-<div class="posts-container">
+<div class="posts">
     {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
     {%- for post in posts -%}
     <article>

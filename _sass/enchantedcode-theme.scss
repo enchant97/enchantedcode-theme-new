@@ -20,7 +20,7 @@ body {
     margin: auto;
 }
 
-a, div, p, ul, li {
+a, div, p, ul, li, time {
     font-family: $main-ff;
 }
 
@@ -44,7 +44,7 @@ a:hover {
     text-decoration: underline;
 }
 
-header {
+header.body-header {
     display: flex;
     align-items: center;
     border-bottom: $border-style;
@@ -73,20 +73,18 @@ header {
     }
 }
 
-.posts-container, p {
+.posts, p {
     background-color: darken($body-bg, 2);
     border-radius: $border-rad;
     padding: 10px;
 }
 
-.posts-container {
-    display: flex;
-    flex-wrap: wrap;
+.posts {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
     gap: 20px;
-    justify-content: center;
-    
+
     article {
-        width: 200px;
         padding: 20px;
         background-color: darken($body-bg, 8);
         border-radius: $border-rad;
@@ -95,6 +93,25 @@ header {
     article:hover {
         transition-duration: 500ms;
         background-color: darken($body-bg, 12);
+    }
+
+    time {
+        color: lighten($main-fg, 50);
+        font-size: 0.9em;
+    }
+
+    p {
+        background-color: darken($body-bg, 8);
+    }
+}
+
+article.post header {
+    .meta {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        color: lighten($main-fg, 50);
+        font-size: 0.9em;
     }
 }
 
@@ -110,5 +127,18 @@ footer {
     h1 {
         font-size: 1.2em;
         margin: 0;
+    }
+}
+
+// Different Screen Sizes
+@media(max-width: 800px) {
+    .posts {
+        grid-template-columns: repeat(2, auto);
+    }
+}
+
+@media(max-width: 600px) {
+    .posts {
+        grid-template-columns: repeat(1, auto);
     }
 }
