@@ -6,8 +6,25 @@ description: >
 copyright: My Name
 
 # EnchantedCode Theme Configs
+
+# enable excerpts on post previews
+#show_excerpts: false
+
+# enable the site breadcrumb (default is false)
 enable_breadcrumb: true
+
+# date format for human readable post meta
+#date_format: "%b %-d, %Y"
+
+# link specific pages to header navbar
+#header_pages:
+# - about.md
+
+# use theme with jekyll-remote-theme
+#remote_theme: enchant97/enchantedcode-theme
 
 plugins:
  - jekyll-feed
  - jekyll-seo-tag
+ # uncomment this if loading the theme with remote_theme
+ #- jekyll-remote-theme

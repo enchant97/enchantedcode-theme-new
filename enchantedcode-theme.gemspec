@@ -6,7 +6,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Leo Spratt"]
   spec.email         = ["enchant97@users.noreply.github.com"]
 
-  spec.summary       = "The offical enchantedcode jekyll theme"
+  spec.summary       = "The official Enchanted-Code jekyll theme"
   spec.homepage      = "https://github.com/enchant97/enchantedcode-theme"
   spec.license       = "MIT"
 
