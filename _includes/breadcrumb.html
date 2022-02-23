@@ -1,22 +1,25 @@
 {% if site.enable_breadcrumb %}
 {% if page.url != "/" %}
-<ol class="breadcrumb">
-    <li><a href="{{ site.baseurl }}/">Home</a></li>
-    {%- assign url_parts = page.url | remove_first: "index.html" | split: '/' -%}
-    {%- assign curr_combined = site.baseurl -%}
-    {%- for url_part in url_parts -%}
-    {% if url_part != "" %}
-    {%- assign curr_combined = curr_combined | append: "/" | append: url_part -%}
-    {% if curr_combined == page.url %}
-    <li class="active">{{ url_part | remove_first: '.html' | capitalize }}</li>
-    {% else %}
-    <li>
-        <a href="{{ curr_combined }}">{{ url_part | remove_first: '.html' | capitalize }}</a>
-    </li>
-    {% endif %}
-    {%- endif -%}
-    {%- endfor -%}
-</ol>
+<nav aria-label="breadcrumbs">
+    <ol class="breadcrumb">
+        <li><a href="{{ site.baseurl }}/">Home</a></li>
+        {%- assign url_parts = page.url | remove_first: "index.html" | split: '/' -%}
+        {%- assign curr_combined = site.baseurl -%}
+        {%- for url_part in url_parts -%}
+        {% if url_part != "" %}
+        {%- assign curr_combined = curr_combined | append: "/" | append: url_part -%}
+        {%- assign index_combined = curr_combined | append: '/index.html' -%}
+        {% if curr_combined == page.url or page.url == index_combined %}
+        <li class="active" aria-current="page">{{ url_part | remove_first: '.html' | capitalize }}</li>
+        {% else %}
+        <li>
+            <a href="{{ curr_combined }}">{{ url_part | remove_first: '.html' | capitalize }}</a>
+        </li>
+        {% endif %}
+        {%- endif -%}
+        {%- endfor -%}
+    </ol>
+</nav>
 {% endif %}
 
 {% endif %}

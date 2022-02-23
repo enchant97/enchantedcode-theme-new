@@ -38,7 +38,7 @@ a {
     color: #2a7ae2;
     text-decoration: none;
 
-    
+
 }
 
 a:visited {
@@ -53,17 +53,17 @@ header.body-header {
     display: flex;
     align-items: center;
     border-bottom: 5px solid $site_color_scheme;
-    
+
     h1 {
         margin-right: auto;
-        
+
         a {
             font-family: $site-name-ff;
             margin-bottom: 0;
             font-size: 0.82em;
         }
     }
-    
+
     a{
         color: $main-fg;
     }
@@ -222,6 +222,7 @@ ol.breadcrumb {
 
     li.active {
         color: $faded-fg;
+        user-select: none;
     }
 }
 
@@ -238,6 +239,25 @@ footer {
         font-size: 1.2em;
         margin: 0;
     }
+}
+
+#skip-to-main-bnt {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    left: -1000px;
+    overflow: hidden;
+}
+
+#skip-to-main-bnt:focus, #skip-to-main-bnt:active {
+    width: unset;
+    height: unset;
+    left: unset;
+    font-size: large;
+    padding: 10px;
+    background-color: red;
+    color: white;
+    text-decoration: underline;
 }
 
 // Different Screen Sizes

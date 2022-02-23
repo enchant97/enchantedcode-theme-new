@@ -3,8 +3,9 @@
 {%- include head.html -%}
 
 <body>
+    <a href="#main" id="skip-to-main-bnt">Skip to main content</a>
     {%- include header.html -%}
-    <main>{{ content }}</main>
+    <main id="main">{{ content }}</main>
     {%- include footer.html -%}
 </body>
 
