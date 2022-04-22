@@ -306,7 +306,9 @@ footer {
     right: 0;
     top: 0;
     bottom: 0;
-    backdrop-filter: blur(4px) brightness(30%);
+    background-color: #00000091;
+    backdrop-filter: blur(4px);
+    z-index: 99;
 }
 
 #theme-picker-selector button {
@@ -332,6 +334,18 @@ footer {
     background-color: var(--sub3-bg);
     padding: .8rem;
     border-radius: $border-rad;
+    display: none;
+    animation: fade-in 400ms;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 .page-anchor {
