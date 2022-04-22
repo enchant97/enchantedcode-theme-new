@@ -283,6 +283,10 @@ footer {
     display: flex;
 }
 
+#theme-toggle-bnt.hidden {
+    display: none;
+}
+
 #theme-toggle-bnt svg {
     height: 2rem;
     transition: 400ms;
@@ -321,6 +325,23 @@ footer {
     background-color: grey;
 }
 
+#to-top-bnt {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    background-color: var(--sub3-bg);
+    padding: .8rem;
+    border-radius: $border-rad;
+}
+
+.page-anchor {
+    display: none;
+    padding-left: .5rem;
+}
+
+:is(h1, h2, h3, h4, h5, h6):hover .page-anchor {
+    display: initial;
+}
 
 // Different Screen Sizes
 @media(max-width: 800px) {
