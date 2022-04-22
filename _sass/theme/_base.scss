@@ -3,83 +3,95 @@ $main-ff: 'Open Sans', sans-serif;
 $site-name-ff: 'Audiowide', cursive;
 $title-ff: 'Roboto', sans-serif;
 $code-ff: 'Roboto Mono', monospace;
-// Colors
-$site_color_scheme: #2a76b7;
-// Font Colors
-$main-fg: black;
-$faded-fg: lighten($main-fg, 50);
-// Backgrounds
-$body-bg: #f5f5f5;
-$sub-bg: darken($body-bg, 3);
-$sub2-bg: darken($body-bg, 8);
-$sub3-bg: darken($body-bg, 45);
 // Borders
-$border-table-style: 1px solid $site_color_scheme;
+$border-table-style: 1px solid var(--site-color-scheme);
 
 $border-rad: 8px;
 
 body {
-    background-color: $body-bg;
+    background-color: var(--body-bg);
     max-width: 900px;
     padding: 14px;
     margin: auto;
 }
 
-a, div, p, ul, li, time {
+a,
+button,
+div,
+p,
+ul,
+li,
+time {
     font-family: $main-ff;
+    font-size: 1rem;
+    color: var(--main-fg);
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: $title-ff;
     font-weight: normal;
+    color: var(--main-fg);
 }
 
-a {
+a,
+a:visited {
     color: #2a7ae2;
     text-decoration: none;
-
-
-}
-
-a:visited {
-    color: #226ac9;
 }
 
 a:hover {
     text-decoration: underline;
 }
 
+.feather {
+    height: 24px;
+    width: 24px;
+    stroke: var(--main-fg);
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+}
+
 header.body-header {
     display: flex;
     align-items: center;
-    border-bottom: 5px solid $site_color_scheme;
+    border-bottom: 5px solid var(--site-color-scheme);
 
-    h1 {
-        margin-right: auto;
+    .site-title {
+        margin: 1.35rem auto 1.35rem 0;
 
         a {
             font-family: $site-name-ff;
-            margin-bottom: 0;
-            font-size: 0.82em;
+            font-size: 1.65rem;
         }
     }
 
-    a{
-        color: $main-fg;
+    a {
+        color: var(--main-fg);
     }
 
     a:visited {
-        color: $main-fg;
+        color: var(--main-fg);
     }
 
     nav {
         display: flex;
         gap: 15px;
+        align-items: center;
     }
 }
 
-.posts, p, ul, ol {
-    background-color: $sub-bg;
+.posts,
+p,
+ul,
+ol {
+    background-color: var(--sub-bg);
     border-radius: $border-rad;
     padding: 10px;
     list-style-position: inside;
@@ -101,16 +113,18 @@ code {
     padding: 1px 5px;
 }
 
-pre.highlight, code {
+pre.highlight,
+code {
     font-family: $code-ff;
-    font-size: 0.9em;
+    font-weight: bold;
+    font-size: .86rem;
     border-radius: $border-rad;
-    background-color: $sub2-bg;
+    background-color: var(--sub3-bg);
 }
 
 blockquote {
-    color: lighten($main-fg, 50);
-    border-left: 6px solid $site_color_scheme;
+    color: var(--faded-fg);
+    border-left: 6px solid var(--site-color-scheme);
     margin: 0;
     padding-left: 15px;
     letter-spacing: -1px;
@@ -120,11 +134,11 @@ blockquote {
 table {
     width: 100%;
     border-collapse: collapse;
-    border-bottom: 4px solid $site_color_scheme;
+    border-bottom: 4px solid var(--site-color-scheme);
     margin: 10px 0;
 
     thead {
-        background-color: $site_color_scheme;
+        background-color: var(--site-color-scheme);
         color: white;
     }
 
@@ -169,22 +183,22 @@ img {
 
     article {
         padding: 20px;
-        background-color: $sub2-bg;
+        background-color: var(--sub2-bg);
         border-radius: $border-rad;
     }
 
     article:hover {
         transition-duration: 500ms;
-        background-color: darken($sub2-bg, 4);
+        background-color: darkgrey;
     }
 
     time {
-        color: $faded-fg;
+        color: var(--faded-fg);
         font-size: 0.9em;
     }
 
     p {
-        background-color: $sub2-bg;
+        background-color: var(--sub2-bg);
     }
 }
 
@@ -201,7 +215,7 @@ img {
         display: flex;
         flex-direction: column;
         gap: 5px;
-        color: $faded-fg;
+        color: var(--faded-fg);
         font-size: 0.9em;
     }
 }
@@ -217,11 +231,11 @@ ol.breadcrumb {
     >li+li:before {
         padding: 0 5px;
         content: "/";
-        color: $faded-fg;
+        color: var(--faded-fg);
     }
 
     li.active {
-        color: $faded-fg;
+        color: var(--faded-fg);
         user-select: none;
     }
 }
@@ -233,7 +247,7 @@ footer {
     text-align: center;
     margin-top: 50px;
     padding-top: 10px;
-    border-top: 1px solid darken($body-bg, 10);
+    border-top: 1px solid lightgrey;
 
     h1 {
         font-size: 1.2em;
@@ -249,7 +263,8 @@ footer {
     overflow: hidden;
 }
 
-#skip-to-main-bnt:focus, #skip-to-main-bnt:active {
+#skip-to-main-bnt:focus,
+#skip-to-main-bnt:active {
     width: unset;
     height: unset;
     left: unset;
@@ -259,6 +274,53 @@ footer {
     color: white;
     text-decoration: underline;
 }
+
+#theme-toggle-bnt {
+    cursor: pointer;
+    border: none;
+    padding: 0;
+    background-color: unset;
+    display: flex;
+}
+
+#theme-toggle-bnt svg {
+    height: 2rem;
+    transition: 400ms;
+}
+
+#theme-toggle-bnt svg:hover {
+    stroke: grey;
+}
+
+#theme-picker-selector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .3rem;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    backdrop-filter: blur(4px) brightness(30%);
+}
+
+#theme-picker-selector button {
+    border: none;
+    border-radius: $border-rad;
+    padding: 1rem 2rem;
+    transition: 400ms;
+    cursor: pointer;
+}
+
+#theme-picker-selector button.active {
+    background-color: var(--site-color-scheme);
+}
+
+#theme-picker-selector button:hover {
+    background-color: grey;
+}
+
 
 // Different Screen Sizes
 @media(max-width: 800px) {
@@ -271,7 +333,9 @@ footer {
     header.body-header h1 {
         margin-right: initial;
     }
-    header.body-header, header.body-header nav {
+
+    header.body-header,
+    header.body-header nav {
         text-align: center;
         flex-direction: column;
     }
@@ -281,10 +345,18 @@ footer {
     }
 
     .posts {
-        grid-template-columns: repeat(1, auto);
+        grid-template-columns: auto;
     }
 
     img {
         width: 100%;
+    }
+
+    #theme-picker-selector {
+        flex-direction: column;
+    }
+
+    #theme-picker-selector button {
+        min-width: 50%;
     }
 }

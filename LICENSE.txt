@@ -4,6 +4,14 @@ Minima Code
     Copyright (c) 2016-present Parker Moore and the minima contributors
     see <https://github.com/jekyll/minima>
 
+feather-sprite.svg
+    Copyright (c) 2013-2017 Cole Bemis
+    see <https://github.com/feathericons/feather>
+
+theme-changer.js
+    Copyright (c) 2022 Leo Spratt
+    see <https://github.com/enchant97/js-theme-changer>
+
 Not Listed Above
     Copyright (c) 2022 Leo Spratt
 

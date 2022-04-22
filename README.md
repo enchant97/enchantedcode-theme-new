@@ -1,6 +1,12 @@
 # Enchanted-Code Theme
 The official Enchanted-Code jekyll theme. Inspired from the Minima theme. Designed to be uncluttered and optimised for modern web-browsers.
 
+## Features
+- Theme picker to switch between site themes
+- Dark-mode, Light-mode
+- Feather Icons included (v4.29.0)
+- Responsive design
+
 ## Installation
 And add these lines to your Jekyll site's `_config.yml`:
 
@@ -19,6 +25,7 @@ Configuration options are documented in the sample `_config.yml` file.
 
 ### Includes
 - `breadcrumb.html` - A breadcrumb element (if enabled)
+- `feather-icon.html` - Place a svg feather-icon (icon_name argument must be supplied)
 - `footer.html` - The sites footer element
 - `head.html` - The sites head element
 - `header.html` - The sites header element with navbar, title, etc
