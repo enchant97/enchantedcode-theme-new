@@ -27,6 +27,10 @@ time {
     color: var(--main-fg);
 }
 
+p {
+    overflow-wrap: break-word;
+}
+
 h1 {
     text-align: center;
 }
