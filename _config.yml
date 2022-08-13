@@ -24,7 +24,15 @@ enable_breadcrumb: true
 #remote_theme: enchant97/enchantedcode-theme
 
 plugins:
+ - jekyll-paginate
  - jekyll-feed
  - jekyll-seo-tag
  # uncomment this if loading the theme with remote_theme
  #- jekyll-remote-theme
+
+# Change the homepage heading
+#welcome_msg: "Welcome To The \"Amazing Site\""
+
+# enable pagination
+#paginate: 8
+#paginate_path: "/page:num/"

@@ -2,8 +2,18 @@
 layout: default
 ---
 
-<h1>{{ page.title }}</h1>
+<div class="panel">
+    <h1>
+        {%- if site.welcome_msg -%}
+        {{ site.welcome_msg }}
+        {%- else -%}
+        {{ page.title }}
+        {%- endif -%}
+    </h1>
 
-{{ content }}
+    {{ content }}
+</div>
 
-{%- include posts.html -%}
+<div class="panel">
+    {%- include posts.html -%}
+</div>
