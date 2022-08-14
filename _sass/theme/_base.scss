@@ -10,7 +10,7 @@ $border-rad: 8px;
 
 body {
     background-color: var(--body-bg);
-    max-width: 900px;
+    max-width: 90rem;
     padding: 14px;
     margin: auto;
 }
@@ -178,7 +178,7 @@ table {
 }
 
 img {
-    max-width: 100%;
+    width: 100%;
 }
 
 .posts {
@@ -207,24 +207,34 @@ img {
     }
 }
 
-.post header {
-    margin-bottom: 30px;
+.post {
+    max-width: 40rem;
+    margin: auto;
 
-    h1 {
-        font-size: 2.4em;
-        margin-bottom: 18px;
-        margin-top: 10px;
+    img {
+        border-radius: $border-rad;
     }
 
-    .meta {
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-        color: var(--faded-fg);
-        font-size: 0.9em;
-        align-items: center;
+    header {
+        margin-bottom: 30px;
+
+        h1 {
+            font-size: 2.4em;
+            margin-bottom: 18px;
+            margin-top: 10px;
+        }
+
+        .meta {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            color: var(--faded-fg);
+            font-size: 0.9em;
+            align-items: center;
+        }
     }
 }
+
 
 ol.breadcrumb {
     padding: 10px;
@@ -389,10 +399,6 @@ footer {
 
     .posts {
         grid-template-columns: auto;
-    }
-
-    img {
-        width: 100%;
     }
 
     #theme-picker-selector {
