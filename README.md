@@ -1,6 +1,18 @@
 # Enchanted-Code Theme
 The official Enchanted-Code jekyll theme. Inspired from the Minima theme. Designed to be uncluttered and optimised for modern web-browsers.
 
+## This Project Is **EOL**
+What Does This Mean?
+- No more updates
+- This repo will be archived
+- No more demo site
+
+Why?
+- I have moved to using Hugo for my website instead of Jekyll.
+
+Alternatives?
+- I have rebuilt (and overhauled) the theme to be used with Hugo, find it here: [github.com/enchant97/hugo-enchantedcode](https://github.com/enchant97/hugo-enchantedcode)
+
 ## Features
 - Theme picker to switch between site themes
 - Dark-mode, Light-mode
